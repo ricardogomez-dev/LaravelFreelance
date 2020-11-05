@@ -56,21 +56,20 @@ footer {
     background-color: green;
 }
 .container{
-    position: absolute;
+    position: fixed;
     transform:rotate(-90deg);
-    margin-left: -33%;
+    margin-left: 23px;
     text-align: right;
     margin-top: 363px;
     width: 160%;
-    height: 300px;
+    height: 180px;
     background-color: red;
     color:white; 
-    float:left;
 }
 .container h1{
-    margin-right: 10%;
+    margin-right: 12%;
     margin-top:5%;
-    font-size: 50px;
+    font-size: 50px;    
 }
 
 .servicio{
@@ -92,6 +91,9 @@ footer {
 
 </style>
 <body>
+    <div class="container">
+        <h1>Text</h1>
+    </div>
     <div class="contenido">
         <h1>Title</h1>
         <div class="barra"></div>
@@ -105,9 +107,6 @@ footer {
             <hr>
             </div>
         @endforeach
-    </div>
-    <div class="container">
-        <h1>Text</h1>
     </div>
     <footer class="pie-pagina">
         <h1>Footer</h1>
