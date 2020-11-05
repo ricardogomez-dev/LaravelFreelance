@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-6">
             <div class="card">
-                <table class="table">
+                <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -18,21 +18,18 @@
                             <th>Acción</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        @foreach($items as $item)
-                            <tr>
-                                <td>{{ $item->id }}</td>
-                                <td>{{ $item->title }}</td>
-                                <td><button class="btn btn-primary">Agregar</button></td>
-                            </tr>
-                        @endforeach
-                    </tbody>
+                    <tbody id="load_data"></tbody>
                 </table>
                 <div>
-                    {{ $items->links() }}
+                    <ul class="pagination"></ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('js')
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="{{ asset('js/ajax-pagination.js') }}"></script>
 @endsection

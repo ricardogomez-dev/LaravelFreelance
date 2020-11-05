@@ -16,8 +16,13 @@ Route::get('/ver-pdf', 'HomeController@pdf')->name('pdf.index');
 // #2 - Paginación Ajax.
 
 Route::get('/paginacion-ajax', function(){
+	
+	return view('paginacion');
+});
+
+Route::get('/set-paginations', function(){
 	$items = App\Item::paginate(5);
-	return view('paginacion', compact('items'));
+	return response()->json($items);
 });
 
 // Otros.
